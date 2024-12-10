@@ -37,7 +37,7 @@ class Memory:
         print(f" {self.state}")
 
     def printStats(self):
-        print(f"Total Pages: {len(self.pages)}")
+        print(f"\nTotal Pages: {len(self.pages)}")
         print(f"Total Page Faults: {self.total_faults}")
         print(f"Total Page Hits: {len(self.pages) - self.total_faults}")
         print("Fault Rate: %.2f%%" % self.getFaultRate())

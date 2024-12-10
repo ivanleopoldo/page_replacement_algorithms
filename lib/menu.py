@@ -14,7 +14,7 @@ def main_menu(default):
             Choice(index, name=metadata["name"])
             for index, metadata in enumerate(all_metadata)
         ]
-        + [Separator(), Choice(-1, name="Settings")],
+        + [Choice(len(all_metadata), "All"), Separator(), Choice(-1, name="Settings")],
         default=default,
     ).execute()
     return choice

@@ -44,7 +44,21 @@ if __name__ == "__main__":
         elif choice == 2:
             algorithm = OPTIMAL(config, pages)
 
-        algorithm.run()
+        if choice == len(all_metadata):
+            fifo = FIFO(config, pages)
+            lru = LRU(config, pages)
+            optimal = OPTIMAL(config, pages)
+
+            print("\nFIFO")
+            fifo.run()
+            print("-" * 50)
+            print("\nLRU")
+            lru.run()
+            print("-" * 50)
+            print("\nOPTIMAL")
+            optimal.run()
+        else:
+            algorithm.run()
     elif choice < 0:
         if choice == -1:
             setting = settings_menu(defaults["capacity"])
