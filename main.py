@@ -1,21 +1,15 @@
-import sys
-
-from InquirerPy import inquirer
-from InquirerPy.separator import Separator
-from InquirerPy.base.control import Choice
-
 from core.fifo import FIFO
 from core.lru import LRU
 from core.optimal import OPTIMAL
 from lib.config import loadConfig, saveConfig
-from lib.metadata import all_metadata
 from lib.menu import (
+    integer_input,
     main_menu,
     settings_menu,
     string_input,
     toggle_options,
-    integer_input,
 )
+from lib.metadata import all_metadata
 
 if __name__ == "__main__":
     config = loadConfig()

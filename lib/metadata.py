@@ -1,7 +1,7 @@
 import importlib.util
 import os
 
-directory = "core"
+directory = os.path.dirname(os.path.dirname(os.path.abspath(__file__))) + "/core"
 
 all_metadata = []
 
